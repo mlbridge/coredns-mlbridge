@@ -4,6 +4,9 @@ This repository contains the plugin for connecting the CoreDNS server to a
 Machine Learning Environment for DNS request and response analysis, monitoring 
 and alerting.
 
+This can be modified to work for any other platform as well as language which 
+does not have machine learning capabilities. 
+
 ## Installation
 
 Clone the repository:
@@ -20,11 +23,20 @@ To install and start CoreDNS please take a look at the CoreDNS
 CoreDNS. To add external plugins, please take a look at the 
 [example plugin](https://github.com/coredns/example).
 
-
-
-
+To add the plugin to a particular port say 1053, please make the changes to the
+Corefile as shown below:
 
 ```
-cd mlbridge-ui/mlbridge_ui/src
-python3 ui.py
+.:1053 {
+    mlplugin
+}
 ```
+
+# MLBridge Plugin
+
+The mlbridge plugin is a CoreDNS plugin that forwards requests to the 
+mlbridge-middleware app via HTTP POST requests. Once the mlbridge-middleware app
+processes the request,it sends the prediction, whether the domain name is 
+malicious or benign, back to the plugin. Depending on the nature of the domain 
+name, the plugin can be configured to allow the request to fall through to the 
+other plugins or send the request to a honeypot or a blackhole.
