@@ -1,5 +1,8 @@
 # CoreDNS-MLBridge
 
+![GSoC Icon](https://developers.google.com/open-source/gsoc/resources/downloads/GSoC-logo-horizontal-200.png)
+
+
 This repository contains the plugin for connecting the CoreDNS server to a 
 Machine Learning Environment for DNS request and response analysis, monitoring 
 and alerting.
@@ -32,7 +35,7 @@ Corefile as shown below:
 }
 ```
 
-# MLBridge Plugin
+## MLBridge Plugin
 
 The mlbridge plugin is a CoreDNS plugin that forwards requests to the 
 mlbridge-middleware app via HTTP POST requests. Once the mlbridge-middleware app
