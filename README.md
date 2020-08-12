@@ -1,5 +1,7 @@
 # CoreDNS-MLBridge
 
+[![GitHub license](https://img.shields.io/github/license/mlbridge/coredns-mlbridge)](https://github.com/mlbridge/coredns-mlbridge/blob/master/LICENSE)
+
 ![GSoC Icon](https://developers.google.com/open-source/gsoc/resources/downloads/GSoC-logo-horizontal-200.png)
 
 
